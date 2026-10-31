@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shadow Archer — Landscape Cover 1920×1080</title>
+  <link rel="stylesheet" href="./_shared.css" />
+  <style>
+    .cover { width: 1920px; height: 1080px; }
+    .title-wrap { right: 100px; top: 150px; max-width: 1050px; text-align: right; }
+    .title { font-size: 220px; }
+    .subtitle { font-size: 44px; margin-top: 20px; }
+    .chip-row { justify-content: flex-end; margin-top: 48px; }
+    .chip { font-size: 24px; padding: 14px 28px; }
+    .hero-stand { left: 220px; top: 110px; }
+    .hero-stand svg { width: 760px; height: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.9)); }
+    .mountain-silhouette {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 220px;
+      background:
+        linear-gradient(180deg, transparent, rgba(0,0,0,0.9) 80%),
+        radial-gradient(ellipse at 20% 100%, #1a1a2e 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 100%, #1a1a2e 0%, transparent 50%);
+      z-index: 1;
+    }
+    .glow-arrow {
+      position: absolute; top: 320px; right: 240px;
+      width: 420px; height: 10px;
+      background: linear-gradient(90deg, transparent, #ffd770, #fff);
+      transform: rotate(-18deg);
+      box-shadow: 0 0 30px #ffbf47, 0 0 60px #ff8f33;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <div class="rays"></div>
+    <div class="mountain-silhouette"></div>
+
+    <div class="hero-stand">
+      <svg viewBox="0 0 220 300">
+        <!-- Hero inline SVG (duplicated from _hero.html so the file is self-contained for screenshotting) -->
+        <defs>
+          <linearGradient id="cape1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a4f70"/><stop offset="1" stop-color="#142738"/></linearGradient>
+          <linearGradient id="armor1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a738f"/><stop offset="1" stop-color="#223d54"/></linearGradient>
+          <radialGradient id="eye1" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#9fe9ff"/><stop offset="1" stop-color="#9fe9ff" stop-opacity="0"/></radialGradient>
+        </defs>
+        <path d="M 90 95 L 130 95 L 162 160 L 174 240 L 140 265 L 80 265 L 48 240 L 62 160 Z" fill="url(#cape1)"/>
+        <path d="M 72 118 Q 82 95 100 100 L 100 125 Z" fill="url(#armor1)"/>
+        <path d="M 148 118 Q 138 95 120 100 L 120 125 Z" fill="url(#armor1)"/>
+        <circle cx="80" cy="112" r="3" fill="#d4a34b"/><circle cx="140" cy="112" r="3" fill="#d4a34b"/>
+        <path d="M 86 118 L 134 118 L 138 190 L 110 205 L 82 190 Z" fill="url(#armor1)" stroke="#d4a34b" stroke-opacity=".85"/>
+        <path d="M 82 120 L 134 185" stroke="#4a321e" stroke-width="4" stroke-linecap="round"/>
+        <rect x="100" y="150" width="12" height="12" fill="#d4a34b" rx="2"/>
+        <rect x="100" y="88" width="20" height="12" fill="#db9f76"/>
+        <rect x="98" y="95" width="24" height="7" fill="#18344e" rx="2"/>
+        <ellipse cx="110" cy="76" rx="22" ry="23" fill="#f5caa2"/>
+        <path d="M 92 60 Q 94 70 100 76 L 95 85 L 86 72 Z" fill="#2c2621"/>
+        <path d="M 128 60 Q 126 70 120 76 L 125 85 L 134 72 Z" fill="#2c2621"/>
+        <path d="M 72 72 Q 110 32 148 72 L 142 92 Q 130 80 110 80 Q 90 80 78 92 Z" fill="#18344e"/>
+        <path d="M 72 72 Q 110 32 148 72" stroke="#d4a34b" stroke-opacity=".7" fill="none" stroke-width="1.5"/>
+        <rect x="98" y="60" width="24" height="4" fill="#d4a34b" rx="1"/>
+        <circle cx="110" cy="62" r="3" fill="#5cd5ff"/>
+        <ellipse cx="118" cy="78" rx="7" ry="4" fill="url(#eye1)"/>
+        <ellipse cx="118" cy="78" rx="3.5" ry="2.3" fill="#f7f9fb"/>
+        <circle cx="119" cy="78" r="1.7" fill="#5cd5ff"/><circle cx="119.3" cy="78" r=".9" fill="#060b12"/>
+        <line x1="72" y1="135" x2="38" y2="150" stroke="#101f2b" stroke-width="7" stroke-linecap="round"/>
+        <path d="M 32 100 Q 20 150 32 200" fill="none" stroke="#96633b" stroke-width="5" stroke-linecap="round"/>
+        <path d="M 32 100 Q 20 150 32 200" fill="none" stroke="#e0d4b8" stroke-opacity=".5" stroke-width="1.5"/>
+        <line x1="32" y1="100" x2="32" y2="200" stroke="#f0ead6" stroke-width="1"/>
+        <circle cx="32" cy="100" r="2.5" fill="#e0d4b8"/><circle cx="32" cy="200" r="2.5" fill="#e0d4b8"/>
+        <line x1="148" y1="135" x2="170" y2="145" stroke="#101f2b" stroke-width="7" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="glow-arrow"></div>
+
+    <div class="title-wrap">
+      <div class="title">SHADOW<br/>ARCHER</div>
+      <div class="subtitle">THE LOST FORTRESS</div>
+      <div class="chip-row">
+        <div class="chip">🏹 2.5D Ragdoll</div>
+        <div class="chip">26 Stages · Endless</div>
+        <div class="chip">7 Heroes</div>
+        <div class="chip">Daily Trial</div>
+      </div>
+    </div>
+
+    <div class="vignette"></div>
+  </div>
+</body>
+</html>
